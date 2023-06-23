@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html x-data="{colorMode: localStorage.getItem('colorMode') || localStorage.setItem('colorMode', 'light')}" x-init="$watch('colorMode', val => localStorage.setItem('colorMode', val))" x-bind:class="{'dark': colorMode === 'dark' || (colorMode === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)}" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AFG</title>
+  <meta name="description" content="" />
+  <link rel="icon" type="image/x-icon" href="https://ik.imagekit.io/n0uvizrukm2/websites/chai-cloud/Vector__2__H9Chm1ngK.svg">
+  <meta property="og:title" content="AFG" />
+  <meta property="og:image" content="" />
+
+  <link id="heading-font" rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700;800;900&display=swap" media="all" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+    <!--Replace with your tailwind.css once created-->
+    <link href="https://unpkg.com/@tailwindcss/custom-forms/dist/custom-forms.min.css" rel="stylesheet" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+      html {
+        font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            animation: {
+              marquee: 'marquee 25s linear infinite',
+              marquee2: 'marquee2 25s linear infinite',
+            },
+            keyframes: {
+              marquee: {
+                '0%': { transform: 'translateX(0%)' },
+                '100%': { transform: 'translateX(-100%)' },
+              },
+              marquee2: {
+                '0%': { transform: 'translateX(100%)' },
+                '100%': { transform: 'translateX(0%)' },
+              },
+            },
+            colors: {
+              'spindle': {
+                  '50': '#f3f9fc',
+                  '100': '#e5f3f9',
+                  '200': '#b5dfed',
+                  '300': '#94d3e5',
+                  '400': '#5abcd6',
+                  '500': '#35a3c2',
+                  '600': '#2585a4',
+                  '700': '#1f6b85',
+                  '800': '#1d5a6f',
+                  '900': '#1d4b5d',
+                  '950': '#14313d',
+              },
+              'pattens-blue': {
+                  '50': '#f0f8ff',
+                  '100': '#deeffe',
+                  '200': '#bae1fd',
+                  '300': '#7dcafc',
+                  '400': '#38b0f8',
+                  '500': '#0e96e9',
+                  '600': '#0276c7',
+                  '700': '#035ea1',
+                  '800': '#075085',
+                  '900': '#0c436e',
+                  '950': '#082b49',
+              },
+              'tiber': {
+                  '50': '#edfcf8',
+                  '100': '#d3f8ec',
+                  '200': '#abefdc',
+                  '300': '#75e0c9',
+                  '400': '#3dcab1',
+                  '500': '#19b099',
+                  '600': '#0d8e7d',
+                  '700': '#0a7267',
+                  '800': '#0b5a52',
+                  '900': '#0a4a45',
+                  '950': '#042725',
+              },
+              'holly': {
+                  '50': '#ebfef2',
+                  '100': '#cffcdf',
+                  '200': '#a3f7c4',
+                  '300': '#68eda6',
+                  '400': '#2cdb83',
+                  '500': '#08c16b',
+                  '600': '#009d57',
+                  '700': '#007e48',
+                  '800': '#02633b',
+                  '900': '#035132',
+                  '950': '#00100a',
+              },
+            },
+          },
+        },
+      }
+    </script>
+</head>
+<body >
+  <div class="relative flex overflow-x-hidden font-sans border-b-8 border-black">
+    <div class="py-6 animate-marquee whitespace-nowrap">
+      <span class="text-4xl mx-4">AFG</span>
+      <span class="text-4xl mx-4">✶</span>
+      <span class="text-4xl mx-4">Advanced for Further Generation</span>
+      <span class="text-4xl mx-4">✶</span>
+      <span class="text-4xl mx-4">DNCC</span>
+      <span class="text-4xl mx-4">✶</span>
+      <span class="text-4xl mx-4">Dian Nuswantoro Computer Club</span>
+      <span class="text-4xl mx-4">✶</span>
+    </div>
+  
+    <div class="absolute top-0 py-6 animate-marquee2 whitespace-nowrap">
+      <span class="text-4xl mx-4">AFG</span>
+      <span class="text-4xl mx-4">✶</span>
+      <span class="text-4xl mx-4">Advanced for Further Generation</span>
+      <span class="text-4xl mx-4">✶</span>
+      <span class="text-4xl mx-4">DNCC</span>
+      <span class="text-4xl mx-4">✶</span>
+      <span class="text-4xl mx-4">Dian Nuswantoro Computer Club</span>
+      <span class="text-4xl mx-4">✶</span>
+    </div>
+  </div>
+  
+<section class="bg-[#FEE9CE]">
+  <div class="py-14 px-4 mx-auto max-w-screen-xl lg:py-24">
+      <div class="flex flex-col justify-center">
+          <h1 class="mb-4 font-serif text-6xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-8xl">Discover The Best Potential with You!</h1>
+          <div class="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
+            <button class="bg-white text-xl hover:bg-gray-200 text-black font-bold py-6 px-12  border-b-8 border-r-8 border-gray-900 hover:border-black">
+              Let's Join
+            </button>
+          </div>
+      </div>
+    </div>
+</section>
+<div class="relative flex overflow-x-hidden font-sans border-t-8 border-b-8 border-black bg-[#814CFB] text-white">
+  <div class="py-6 animate-marquee whitespace-nowrap">
+    <span class="text-4xl mx-4">MOBILE DEV</span>
+    <span class="text-4xl mx-4">DATA ANALYST</span>
+    <span class="text-4xl mx-4">GAME DEV</span>
+    <span class="text-4xl mx-4">NETWORKING</span>
+    <span class="text-4xl mx-4">WEB</span>
+  </div>
+
+  <div class="absolute top-0 py-6 animate-marquee2 whitespace-nowrap">
+    <span class="text-4xl mx-4">MOBILE DEV</span>
+    <span class="text-4xl mx-4">DATA ANALYST</span>
+    <span class="text-4xl mx-4">GAME DEV</span>
+    <span class="text-4xl mx-4">NETWORKING</span>
+    <span class="text-4xl mx-4">WEB</span>
+  </div>
+</div>
+
+<div class="relative flex overflow-x-hidden font-sans border-b-8 border-black bg-[#A5E7C6] text-white">
+  <div class="py-24 animate-marquee whitespace-nowrap">
+    <div class="grid grid-cols-4 gap-4">
+      <div class="max-w-sm border-8 border-gray-800 rounded-lg shadow bg-gray-800">
+        <a href="#">
+            <img class="rounded-t-lg" src="assets/BTNG.webp" alt="" />
+        </a>
+        <div class="p-5">
+            <a href="#">
+                <h5 class="mb-2 text-2xl text-center font-bold tracking-tight text-gray-900 dark:text-white">BTNG 22</h5>
+            </a>
+        </div>
+      </div>
+      <div class="max-w-sm border-8 border-gray-800 rounded-lg shadow bg-gray-800">
+        <a href="#">
+            <img class="rounded-t-lg" src="assets/BTNG.webp" alt="" />
+        </a>
+        <div class="p-5">
+            <a href="#">
+                <h5 class="mb-2 text-2xl text-center font-bold tracking-tight text-gray-900 dark:text-white">Go To School</h5>
+            </a>
+        </div>
+      </div>
+      <div class="max-w-sm border-8 border-gray-800 rounded-lg shadow bg-gray-800">
+        <a href="#">
+            <img class="rounded-t-lg" src="assets/BTNG.webp" alt="" />
+        </a>
+        <div class="p-5">
+            <a href="#">
+                <h5 class="mb-2 text-2xl text-center font-bold tracking-tight text-gray-900 dark:text-white">Dinacom</h5>
+            </a>
+        </div>
+      </div>
+      <div class="max-w-sm border-8 border-gray-800 rounded-lg shadow bg-gray-800">
+        <a href="#">
+            <img class="rounded-t-lg" src="assets/BTNG.webp" alt="" />
+        </a>
+        <div class="p-5">
+            <a href="#">
+                <h5 class="mb-2 text-2xl text-center font-bold tracking-tight text-gray-900 dark:text-white">Bootcamp</h5>
+            </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="absolute top-0 py-24 ml-4 animate-marquee2 whitespace-nowrap">
+    <div class="grid grid-cols-4 gap-4">
+      <div class="max-w-sm border-8 border-gray-800 rounded-lg shadow bg-gray-800">
+        <a href="#">
+            <img class="rounded-t-lg" src="assets/BTNG.webp" alt="" />
+        </a>
+        <div class="p-5">
+            <a href="#">
+                <h5 class="mb-2 text-2xl text-center font-bold tracking-tight text-gray-900 dark:text-white">BTNG 22</h5>
+            </a>
+        </div>
+      </div>
+      <div class="max-w-sm border-8 border-gray-800 rounded-lg shadow bg-gray-800">
+        <a href="#">
+            <img class="rounded-t-lg" src="assets/BTNG.webp" alt="" />
+        </a>
+        <div class="p-5">
+            <a href="#">
+                <h5 class="mb-2 text-2xl text-center font-bold tracking-tight text-gray-900 dark:text-white">Go To School</h5>
+            </a>
+        </div>
+      </div>
+      <div class="max-w-sm border-8 border-gray-800 rounded-lg shadow bg-gray-800">
+        <a href="#">
+            <img class="rounded-t-lg" src="assets/BTNG.webp" alt="" />
+        </a>
+        <div class="p-5">
+            <a href="#">
+                <h5 class="mb-2 text-2xl text-center font-bold tracking-tight text-gray-900 dark:text-white">Dinacom</h5>
+            </a>
+        </div>
+      </div>
+      <div class="max-w-sm border-8 border-gray-800 rounded-lg shadow bg-gray-800">
+        <a href="#">
+            <img class="rounded-t-lg" src="assets/BTNG.webp" alt="" />
+        </a>
+        <div class="p-5">
+            <a href="#">
+                <h5 class="mb-2 text-2xl text-center font-bold tracking-tight text-gray-900 dark:text-white">Bootcamp</h5>
+            </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="relative flex overflow-x-hidden font-sans border-b-8 border-black">
+  <div class="py-6 animate-marquee whitespace-nowrap">
+    <span class="text-4xl mx-4">BASIC TRAINING NEXT GENERATION</span>
+    <span class="text-4xl mx-4">DNCC GOES to School</span>
+    <span class="text-4xl mx-4">DEVELOPER BOOTCAMP 2023</span>
+    <span class="text-4xl mx-4">DINUS APPLICATION COMPETITION</span>
+  </div>
+
+  <div class="absolute top-0 py-6 animate-marquee2 whitespace-nowrap">
+    <span class="text-4xl mx-4">BASIC TRAINING NEXT GENERATION</span>
+    <span class="text-4xl mx-4">DNCC GOES to School</span>
+    <span class="text-4xl mx-4">DEVELOPER BOOTCAMP 2023</span>
+    <span class="text-4xl mx-4">DINUS APPLICATION COMPETITION</span>
+  </div>
+</div>
+<div class="bg-[#8955FF]">
+    <div class="bg-[#F7D51B]">
+      <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <div class="max-w-4xl mb-10 sm:text-center md:mx-auto md:mb-12 lg:max-w-5xl xl:max-w-6xl">
+          <h1 class="mb-4 font-mono text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl">Connecting the dots for engaging collaboration expreience</h1>
+          <br><br>
+          <div class="grid grid-cols-4 gap-2">
+            <div>
+              <img class="rounded-t-lg h-40 animate-bounce" src="assets/58894.png" alt="" />
+            </div>
+            <div class="col-span-3">
+              <p class="font-sans text-left text-4xl my-7"> Together we build DNCC and become students who are more diciplined, accomplished, creative and have noble character, as well as optimizing the abality of members to become a useful generation.</p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <div class="relative px-6 sm:px-0">
+      <div class="absolute inset-0 h-1/2 bg-[#F7D51B] border-b-8 border-black"></div>
+      <div class="relative ml-10 overflow-hidden bg-white divide-y rounded shadow dark:bg-black dark:shadow-gray-700 sm:divide-y-0 sm:divide-x sm:max-w-screen-sm lg:max-w-md">
+            <img class="rounded-t-lg" src="assets/asset1.png" alt="" />
+      </div>
+    </div>
+    
+
+      <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <div class="max-w-4xl mb-10 sm:text-center md:mx-auto md:mb-12 lg:max-w-5xl xl:max-w-6xl">
+          <h1 class="mb-4 font-mono text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">This is Our Division</h1>
+          <p class="font-sans text-center text-white text-4xl my-7">"Pursue your passion, select mission, and elevate your skills to new heights. Embrance the journey of growth and unlock your true potential"</p>
+          <div class="py-10 grid grid-cols-4 gap-0">
+            <div class="bg-[#F8D849] rotate-[10deg] w-80 p-6 shadow-lg border-4 border-black">
+              <h2 class="text-2xl font-bold mb-2 text-gray-800">Card with no image</h2>
+              <p class="text-gray-700">This is my cool new card!</p>
+            </div>
+            <div class="bg-[#F7894A] rotate-[-12deg] w-80 p-6 shadow-lg border-4 border-black">
+              <h2 class="text-2xl font-bold mb-2 text-gray-800">Card with no image</h2>
+              <p class="text-gray-700">This is my cool new card!</p>
+            </div>
+            <div class="bg-[#4BD6D6] rotate-[10deg] w-80 p-6 shadow-lg border-4 border-black">
+              <h2 class="text-2xl font-bold mb-2 text-gray-800">Card with no image</h2>
+              <p class="text-gray-700">This is my cool new card!</p>
+            </div>
+            <div class="bg-[#69ECA5] rotate-[-12deg] w-80 p-6 shadow-lg border-4 border-black">
+              <h2 class="text-2xl font-bold mb-2 text-gray-800">Card with no image</h2>
+              <p class="text-gray-700">This is my cool new card!</p>
+            </div>
+          </div>
+          <br>
+          <br>
+          <div class="grid grid-cols-2 gap-0">
+            <div class="bg-[#FEE9CE] max-w-xl rotate-[10deg] w-80 p-6 shadow-lg border-4 border-black place-self-end">
+              <h2 class="text-2xl font-bold mb-2 text-gray-800">Card with no image</h2>
+              <p class="text-gray-700">This is my cool new card!</p>
+            </div>
+            <div class="bg-[#E09BF8] max-w-xl rotate-[-12deg] w-80 p-6 shadow-lg border-4 border-black place-self-start">
+              <h2 class="text-2xl font-bold mb-2 text-gray-800">Card with no image</h2>
+              <p class="text-gray-700">This is my cool new card!</p>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="relative flex overflow-x-hidden font-sans border-t-8 border-b-8 border-black bg-white text-black">
+    <div class="py-6 animate-marquee whitespace-nowrap">
+      <span class="text-4xl mx-4">REGISTER NOW!  ♥︎</span>
+      <span class="text-4xl mx-4">REGISTER NOW!  ♥︎</span>
+      <span class="text-4xl mx-4">REGISTER NOW!  ♥︎</span>
+      <span class="text-4xl mx-4">REGISTER NOW!  ♥︎</span>
+    </div>
+  
+    <div class="absolute top-0 py-6 animate-marquee2 whitespace-nowrap">
+      <span class="text-4xl mx-4">REGISTER NOW!  ♥︎</span>
+      <span class="text-4xl mx-4">REGISTER NOW!  ♥︎</span>
+      <span class="text-4xl mx-4">REGISTER NOW!  ♥︎</span>
+      <span class="text-4xl mx-4">REGISTER NOW!  ♥︎</span>
+    </div>
+  </div>
+  <section class="bg-[#58CB35]">
+    <div class="py-14 px-4 mx-auto max-w-screen-xl lg:py-24">
+        <div class="flex flex-col justify-center">
+          <div class="grid grid-cols-3 gap-0">
+            <div class="col-span-2">
+              <h1 class="mb-4 text-6xl font-extrabold tracking-tight leading-none text-black font-sans md:text-8xl lg:text-9xl">LET'S JOIN <br>👀 AND</h1>
+              <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-black font-sans md:text-5xl lg:text-6xl">MAKE A CHANGE FOR YOU</h1>
+            </div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <section class="bg-black">
+    <div class="py-14 px-4 mx-auto max-w-screen-xl lg:py-24">
+        <div class="flex justify-center text-center py-6">
+            <div class="grow h-14 text-white text-5xl font-bold animate-pulse">
+              AFG 2023
+            </div>
+            <div class="grow h-14 text-white text-6xl font-bold">
+              DNCC
+            </div>
+            <div class="grow h-14 text-white text-7xl font-bold">
+              AFG 2023
+            </div>
+        </div>
+        <div class="flex justify-center text-center py-6">
+          <div class="grow h-14 text-white text-7xl font-bold">
+            DNCC
+          </div>
+          <div class="grow h-14 text-white text-9xl font-bold animate-pulse">
+            AFG 2023
+          </div>
+          <div class="grow h-14 text-white text-6xl font-bold">
+            DNCC
+          </div>
+        </div>
+        <br>
+        <div class="flex justify-center text-center py-8">
+          <div class="grow h-14 text-white text-5xl font-bold animate-pulse">
+            AFG 2023
+          </div>
+          <div class="grow h-14 text-white text-6xl font-bold">
+            DNCC
+          </div>
+          <div class="grow h-14 text-white text-7xl font-bold animate-pulse">
+            AFG 2023
+          </div>
+          <div class="grow h-14 text-white text-6xl font-bold">
+            DNCC
+          </div>
+        </div>
+        <div class="flex justify-center text-center py-6">
+          <div class="grow h-14 text-white text-5xl font-bold">
+            AFG 2023
+          </div>
+          <div class="grow h-14 text-white text-6xl font-bold animate-pulse">
+            DNCC
+          </div>
+          <div class="grow h-14 text-white text-7xl font-bold">
+            AFG 2023
+          </div>
+      </div>
+      </div>
+  </section>
+
+  <footer class="bg-black">
+    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+      <p class="block text-sm text-white text-center">
+        AfgTeam2023 - Website Makes With Love and Metal Pressure Because Left Him!
+      </p>
+    </div>
+  </footer>
+
+  <!-- AlpineJS Library -->
+  <script defer src="https://unpkg.com/alpinejs@3.9.0/dist/cdn.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      offset: 50,
+      duration: 800
+    });
+  </script>
+
+
+</body>
+
+</html>
